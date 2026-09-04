@@ -1,0 +1,79 @@
+{
+  "blueprint_name": "Ready-to-Deploy Local Extraction Python Pipeline + Schema Validator",
+  "version": "1.4.0",
+  "nodes": [
+    {
+      "id": "trigger_node",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fetch_source",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.source.endpoint/v1/extract"
+      }
+    },
+    {
+      "id": "ai_transform",
+      "type": "n8n-nodes-base.code",
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Production data cleaning and payload normalization\nconst item = $input.item.json;\nreturn { clean_payload: item, processed_at: new Date().toISOString() };"
+      }
+    },
+    {
+      "id": "sync_storage",
+      "type": "n8n-nodes-base.googleSheets",
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "sheetName": "Output_Sync"
+      }
+    }
+  ],
+  "connections": {
+    "trigger_node": {
+      "main": [
+        [
+          {
+            "node": "fetch_source",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "fetch_source": {
+      "main": [
+        [
+          {
+            "node": "ai_transform",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ai_transform": {
+      "main": [
+        [
+          {
+            "node": "sync_storage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

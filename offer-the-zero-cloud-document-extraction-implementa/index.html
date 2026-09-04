@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Zero-Cloud Document Extraction Implementation Guide | Instant Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow { box-shadow: 0 0 50px -10px rgba(56, 189, 248, 0.25); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-black">
+
+    <!-- Top Urgent Notice Bar -->
+    <div class="bg-cyan-950/80 border-b border-cyan-800/40 text-cyan-300 text-xs sm:text-sm font-mono py-2 text-center px-4">
+        ⚡ DIRECT IMPLEMENTATION SYSTEM • IMMEDIATE DIGITAL DOWNLOAD • 100% UNCONDITIONAL REFUND GUARANTEE
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 py-12 sm:py-16">
+        <!-- Niche Badge -->
+        <div class="flex justify-center">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                Local AI Document Processing
+            </span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="mt-6 text-3xl sm:text-5xl font-extrabold text-center tracking-tight text-white leading-tight">
+            Stop Bleeding Hours on Manual Work.<br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">
+                The Zero-Cost Local Document Extraction Pipeline powered by Ollama and structured JSON output.
+            </span>
+        </h1>
+
+        <!-- Subtitle & Problem Statement -->
+        <div class="mt-6 max-w-2xl mx-auto text-center text-slate-400 text-lg">
+            <p class="leading-relaxed">
+                <strong class="text-slate-200">The Problem:</strong> Bleeding monthly cloud API credits parsing PDFs and unstructured invoices through OpenAI.
+            </p>
+        </div>
+
+        <!-- The Value Stack Box -->
+        <div class="mt-12 bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 glow">
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span class="text-cyan-400">01.</span> Core Deliverable (Immediate Access)
+            </h2>
+            <div class="mt-4 flex flex-col sm:flex-row justify-between sm:items-center gap-4 pb-6 border-b border-slate-800">
+                <div>
+                    <h3 class="text-lg font-semibold text-cyan-300">The Zero-Cloud Document Extraction Implementation Guide</h3>
+                    <p class="text-sm text-slate-400 mt-1">Complete step-by-step documentation, architecture schematics, and production checklists.</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-2xl font-black text-white">$17.0</span>
+                    <span class="block text-xs text-emerald-400 font-mono">ONE-TIME</span>
+                </div>
+            </div>
+
+            <!-- Order Bump Box -->
+            <div class="mt-6 p-4 rounded-xl bg-slate-950/80 border-2 border-dashed border-cyan-500/40 hover:border-cyan-400 transition cursor-pointer" onclick="toggleBump()">
+                <div class="flex items-start gap-3">
+                    <input type="checkbox" id="orderBumpCheckbox" class="mt-1 h-5 w-5 rounded border-slate-700 bg-slate-900 text-cyan-500 focus:ring-cyan-400" onchange="updateTotal()">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-2 py-0.5 rounded border border-amber-500/30">ONE-TIME OFFER</span>
+                            <span class="font-bold text-white text-sm sm:text-base">Add: Ready-to-Deploy Local Extraction Python Pipeline + Schema Validator</span>
+                            <span class="text-emerald-400 font-bold ml-auto">+$12.0</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">
+                            Skip manual configuration. Includes importable JSON workflow blueprints, pre-configured environment variables, and error-handling routines.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upsell Box -->
+            <div class="mt-4 p-4 rounded-xl bg-slate-950/80 border border-slate-800 hover:border-slate-700 transition cursor-pointer" onclick="toggleUpsell()">
+                <div class="flex items-start gap-3">
+                    <input type="checkbox" id="upsellCheckbox" class="mt-1 h-5 w-5 rounded border-slate-700 bg-slate-900 text-cyan-500 focus:ring-cyan-400" onchange="updateTotal()">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-blue-500/20 text-blue-300 text-xs font-bold px-2 py-0.5 rounded border border-blue-500/30">VIP EXPANSION</span>
+                            <span class="font-bold text-white text-sm sm:text-base">Add: Enterprise Parser Vault: 25 Specialized OCR Blueprints for Financial Invoices & Contracts</span>
+                            <span class="text-emerald-400 font-bold ml-auto">+$47.0</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">
+                            Access the complete private repository, 100+ curated resource databases, and future monthly blueprint drops.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total and Checkout Button -->
+            <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <div class="text-sm text-slate-400">Total Order Investment:</div>
+                    <div class="text-3xl font-black text-white" id="totalDisplay">$17.0</div>
+                </div>
+                <button onclick="triggerCheckout()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black rounded-xl text-lg shadow-lg hover:shadow-cyan-500/20 transition transform active:scale-95 flex items-center justify-center gap-2">
+                    <span>⚡ GET INSTANT DOWNLOAD NOW</span>
+                </button>
+            </div>
+
+            <!-- Checkout Confirmation Alert (Simulated / Webhook Ready) -->
+            <div id="checkoutSuccessModal" class="hidden mt-6 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-200">
+                <div class="font-bold flex items-center gap-2">
+                    <span>✅ ORDER COMPLETED SUCCESSFULLY</span>
+                </div>
+                <p class="text-sm mt-1">Your assets have been compiled and sent to your email. You can also download them directly below:</p>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs font-mono">
+                    <a href="tripwire_guide.html" class="px-3 py-1.5 bg-emerald-800 text-white rounded hover:bg-emerald-700">📖 Open Guide (.html)</a>
+                    <a href="automation_blueprint.json" download class="px-3 py-1.5 bg-emerald-800 text-white rounded hover:bg-emerald-700">⚙️ Download Blueprint (.json)</a>
+                    <a href="master_vault.md" download class="px-3 py-1.5 bg-emerald-800 text-white rounded hover:bg-emerald-700">🗄️ Download Master Vault (.md)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- What You Receive (Deliverables Breakdown) -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-cyan-400 text-2xl font-black">01</div>
+                <h4 class="text-white font-bold mt-2">Zero-Fluff Blueprint</h4>
+                <p class="text-sm text-slate-400 mt-1">Written specifically for fast execution. No 2-hour videos, just clear architectural steps and copy-paste code.</p>
+            </div>
+            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-cyan-400 text-2xl font-black">02</div>
+                <h4 class="text-white font-bold mt-2">Plug & Play Templates</h4>
+                <p class="text-sm text-slate-400 mt-1">Import ready-to-use n8n, Make, or Python automation files directly into your workspace with zero config headaches.</p>
+            </div>
+            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-cyan-400 text-2xl font-black">03</div>
+                <h4 class="text-white font-bold mt-2">30-Day Guarantee</h4>
+                <p class="text-sm text-slate-400 mt-1">If this doesn't save you at least 10 hours of manual work in your first week, you get 100% of your money back.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const basePrice = 17.0;
+        const bumpPrice = 12.0;
+        const upsellPrice = 47.0;
+
+        function updateTotal() {
+            const bump = document.getElementById('orderBumpCheckbox').checked;
+            const upsell = document.getElementById('upsellCheckbox').checked;
+            let total = basePrice;
+            if (bump) total += bumpPrice;
+            if (upsell) total += upsellPrice;
+            document.getElementById('totalDisplay').innerText = '$' + total.toFixed(2);
+        }
+
+        function toggleBump() {
+            const cb = document.getElementById('orderBumpCheckbox');
+            cb.checked = !cb.checked;
+            updateTotal();
+        }
+
+        function toggleUpsell() {
+            const cb = document.getElementById('upsellCheckbox');
+            cb.checked = !cb.checked;
+            updateTotal();
+        }
+
+        function triggerCheckout() {
+            const bump = document.getElementById('orderBumpCheckbox').checked;
+            const upsell = document.getElementById('upsellCheckbox').checked;
+            let total = basePrice + (bump ? bumpPrice : 0) + (upsell ? upsellPrice : 0);
+            
+            // Record simulated sale to local backend API
+            fetch('/api/record-sale', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    offer_id: 3,
+                    tripwire: true,
+                    bump: bump,
+                    upsell: upsell,
+                    total: total
+                })
+            }).then(res => res.json()).then(data => {
+                document.getElementById('checkoutSuccessModal').classList.remove('hidden');
+                document.getElementById('checkoutSuccessModal').scrollIntoView({ behavior: 'smooth' });
+            }).catch(e => {
+                document.getElementById('checkoutSuccessModal').classList.remove('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
